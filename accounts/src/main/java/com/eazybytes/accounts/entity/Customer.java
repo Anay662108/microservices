@@ -1,15 +1,13 @@
 package com.eazybytes.accounts.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-public class Customer extends BaseEntity{
+@Getter
+@Setter @ToString
+@AllArgsConstructor @NoArgsConstructor
+public class Customer extends  BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,5 +20,4 @@ public class Customer extends BaseEntity{
 
     @Column(name = "mobile_number")
     private String mobileNumber;
-
 }
